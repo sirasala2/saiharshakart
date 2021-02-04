@@ -12,16 +12,19 @@ import ProductDetail from './ProductDetails/productdetail.js'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { NavigationBar } from '../src/components/NavigationBar';
 import Footer from './components/footer';
+import Categories from './components/Categories';
 
 const App = () => {
   return (
-    
+
     <Router>
       <React.Fragment>
-  <Router>
-    <NavigationBar />
-  </Router>
-</React.Fragment>
+        <Router>
+          <NavigationBar />
+          <br />
+          <Categories />
+        </Router>
+      </React.Fragment>
       <Switch>
         <Route path="/" exact>
           <Harshacart />

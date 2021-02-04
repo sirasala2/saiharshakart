@@ -2,7 +2,7 @@ import React from 'react';
 import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
 import styled from 'styled-components';
 const Styles = styled.div`
-  .navbar { background-color: yellow; }
+  .navbar { background-color: orange; }
   a, .navbar-nav, .navbar-light .nav-link {
     color: #000;
     &:hover { color: red; }
