@@ -9,7 +9,7 @@ const Harshacart = () => {
         width: "100vw"
     };
     const header_feature = {
-        bold: {fontWeight: 'bold',color:"grey"},
+        bold: {fontWeight: 'bold',color:"grey",marginLeft:"10px"},
         
     };
     return (

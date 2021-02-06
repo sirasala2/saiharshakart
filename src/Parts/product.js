@@ -4,30 +4,28 @@ import { Button, Row, Container, Col } from 'react-bootstrap';
 
 const Product = (props) => {
   return (
-    <div style={{ margin: '10px' }}>
-      <Row>
-        <Col>
+      <Row style={{margin:"10px"}}>
+        <Col style={{border:"1px solid", borderColor:"grey",borderRadius:"5px",margin:"10px",width:"20%"}}>
           <img src={proimg} />
           <Button href="/product-detail">details
           </Button>
         </Col>
-        <Col>
+        <Col style={{border:"1px solid", borderColor:"grey",borderRadius:"5px",margin:"10px",width:"20%"}}>
         <img src={proimg} />
           <Button  href="/product-detail">
           </Button>
         </Col>
-        <Col>
+        <Col style={{border:"1px solid", borderColor:"grey",borderRadius:"5px",margin:"10px",width:"20%"}}>
         <img src={proimg} />
           <Button  href="/product-detail">
           </Button>
         </Col>
-        <Col>
+        <Col style={{border:"1px solid", borderColor:"grey",borderRadius:"5px",margin:"10px",width:"20%"}}>
         <img src={proimg} />
           <Button  href="/product-detail">
           </Button>
         </Col>
       </Row>
-    </div>
 
 
   );
