@@ -21,7 +21,6 @@ const App = () => {
       <React.Fragment>
         <Router>
           <NavigationBar />
-          
           <Categories />
         </Router>
       </React.Fragment>
