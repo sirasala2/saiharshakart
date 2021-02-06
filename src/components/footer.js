@@ -13,30 +13,30 @@ const Styles = styled.div`
     &:hover { color: red; }
   }
   .form-center {
-    position: absolute;
-    ;
+    position: absolute !important;
+    
     left: 25%;
     right: 25%;
   }
 `;
 const Footer = () => {
-    return (
-        <Styles>
-          
-            <Navbar expand="lg" className="form-center">
-                <Navbar.Brand >Terms and Conditions</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                
-                
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                        <Nav.Item>policy</Nav.Item>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
-            
-        </Styles>
-    )
+  return (
+    <Styles>
+
+      <Navbar expand="lg" className="form-center">
+        <Navbar.Brand >Terms and Conditions</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto">
+            <Nav.Item>policy</Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+
+    </Styles>
+  )
 };
 
 export default Footer;

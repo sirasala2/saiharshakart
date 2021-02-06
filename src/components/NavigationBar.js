@@ -28,8 +28,8 @@ export const NavigationBar = () => (
       </Form>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Item><Nav.Link href="/auth">Signin/signup <i class="fa fa-user" aria-hidden="true"></i></Nav.Link></Nav.Item> 
-          <Nav.Item><Nav.Link href="/cart">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></Nav.Link></Nav.Item>
+          <Nav.Item><Nav.Link href="/auth">Signin/signup <i className="fa fa-user" aria-hidden="true"></i></Nav.Link></Nav.Item> 
+          <Nav.Item><Nav.Link href="/cart">Cart <i className="fa fa-shopping-cart" aria-hidden="true"></i></Nav.Link></Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
