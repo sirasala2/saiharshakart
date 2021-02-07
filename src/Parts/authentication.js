@@ -1,78 +1,26 @@
-import React, { useState } from 'react';
-import { Card, Row, Container, Col } from 'react-bootstrap';
-const Login = (props) => {
-    const username = useFormInput('');
-    const password = useFormInput('');
+import React from 'react';
+import {Row,Col, Button} from 'react-bootstrap';
+import Login from './login';
+import Signup from './signup';
 
-
-    const handleLogin = () => {
-        props.history.push('/login');
-    }
-    const checkoutbtn = {
-        checkoutbtn: {
-            float: 'right'
-        }
-    }
-
-    return (
+const Auth = () => {
+    return(
         <div>
             <br />
-            <Container><Row><Col> Login
-            <br />
-                <br />
-                <div>
-                    Username
-                 <br />
-                    <input type="text" />
-                </div>
-                <div >
-                    Password
-                 <br />
-                    <input type="password" />
-                </div>
-
-                <br />
-                <input type="button" value={'Login'} onClick={handleLogin} />
-                <br /></Col>
+            <Row>
+                <Col></Col>
                 <Col>
-                    SignUp
-            <br />
-                    <br />
-                    <div>
-                        Username
-                 <br />
-                        <input type="text" />
-                    </div>
-                    <div >
-                        Password
-                 <br />
-                        <input type="password" />
-                    </div>
-
-                    <br />
-                    <input type="button" value={'Signup'} onClick={handleLogin} />
-                    <br />
+                   <Button href="/auth/login">Login</Button>
                 </Col>
                 <Col>
-                    <h2 >hello</h2>
+                <Button href="/auth/signup">Signup</Button>
                 </Col>
-            </Row></Container>
-
+                <Col></Col>
+            </Row>
             <br />
         </div>
-    );
-}
+    )
+};
 
-const useFormInput = initialValue => {
-    const [value, setValue] = useState(initialValue);
 
-    const handleChange = (props) => {
-        setValue(props.target.value);
-    }
-    return {
-        value,
-        onChange: handleChange
-    }
-}
-
-export default Login;
+export default Auth;

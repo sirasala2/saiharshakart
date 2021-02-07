@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+
 import companyLogo from '../assets/banner.jpg';
 import Product from '../../src/Parts/product';
 import Paymentimages from '../components/paymentimages';
