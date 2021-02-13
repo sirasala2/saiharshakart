@@ -12,17 +12,17 @@ const Product = (props) => {
         </Col>
         <Col style={{border:"1px solid", borderColor:"grey",borderRadius:"5px",margin:"10px",width:"20%"}}>
         <img src={proimg} />
-          <Button  href="/product-detail">
+          <Button  href="/product-detail">details
           </Button>
         </Col>
         <Col style={{border:"1px solid", borderColor:"grey",borderRadius:"5px",margin:"10px",width:"20%"}}>
         <img src={proimg} />
-          <Button  href="/product-detail">
+          <Button  href="/product-detail">details
           </Button>
         </Col>
         <Col style={{border:"1px solid", borderColor:"grey",borderRadius:"5px",margin:"10px",width:"20%"}}>
         <img src={proimg} />
-          <Button  href="/product-detail">
+          <Button  href="/product-detail">details
           </Button>
         </Col>
       </Row>

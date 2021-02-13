@@ -14,7 +14,7 @@ import { NavigationBar } from '../src/components/NavigationBar';
 import Footer from './components/footer';
 import Categories from './components/Categories';
 import Signup from './Parts/signup';
-import Login from './Parts/login';
+
 
 
 const App = () => {
@@ -31,7 +31,7 @@ const App = () => {
         <Route path="/" exact>
           <Harshacart />
         </Route>
-        <Route path="/auth" exact>
+        <Route path="/login" exact>
           <Auth />
         </Route>
         <Route path="/cart" exact>
@@ -40,10 +40,8 @@ const App = () => {
         <Route path="/product-detail" exact>
           <ProductDetail />
         </Route>
-        <Route path="/auth/login" exact>
-          <Login />
-        </Route>
-        <Route path="/auth/signup" exact>
+        
+        <Route path="/signup" exact>
           <Signup />
         </Route>
         <Redirect to="/" />

@@ -28,7 +28,7 @@ export const NavigationBar = () => (
       </Form>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Item><Nav.Link href="/auth" >Login/signup <i className="fa fa-user" aria-hidden="true"></i></Nav.Link></Nav.Item> 
+          <Nav.Item><Nav.Link href="/login" >Login/signup <i className="fa fa-user" aria-hidden="true"></i></Nav.Link></Nav.Item> 
           <Nav.Item><Nav.Link href="/cart">Cart <i className="fa fa-shopping-cart" aria-hidden="true"></i></Nav.Link></Nav.Item>
         </Nav>
       </Navbar.Collapse>

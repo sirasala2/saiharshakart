@@ -17,7 +17,7 @@ const style = {
 }
 
 const font ={
-  color:"green"
+  color:"black"
 }
 
 
@@ -26,9 +26,9 @@ const Footer=() => {
       <div>
           
             <Row style ={style} >
-              <Col><h2>Terms & Conditions</h2></Col>
-              <Col><h2>Policy</h2></Col>
-              <Col><h2>About us</h2></Col>
+              <Col><h2 style={font}>Terms & Conditions</h2></Col>
+              <Col><h2 style={font}>Policy</h2></Col>
+              <Col><h2 style={font}>About us</h2></Col>
               <Col>
               <h2>Social</h2>
               <img src={Facebook} />

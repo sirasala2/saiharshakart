@@ -1,26 +1,42 @@
 import React from 'react';
-import {Row,Col, Button} from 'react-bootstrap';
-import Login from './login';
-import Signup from './signup';
+import {  Row, Container, Col, Button } from 'react-bootstrap';
 
-const Auth = () => {
-    return(
+const Login = (props) => {
+    return (
         <div>
             <br />
-            <Row>
+            <Container><Row>
                 <Col></Col>
-                <Col>
-                   <Button href="/auth/login">Login</Button>
-                </Col>
-                <Col>
-                <Button href="/auth/signup">Signup</Button>
+                <Col> <h2>LOGIN</h2>
+                <br />
+                <div>
+                    Email
+                 <br />
+                    <input type="text" />
+                </div>
+                <div >
+                    Password
+                 <br />
+                    <input type="password" />
+                </div>
+                <br />
+                <div>
+                    <button style={{textAlign:"center"  ,color:"white" , background:"blue"}}>login</button>
+                </div>
+                <br />
+                <div>
+                    <button href="/signup" style={{textAlign:"center"  ,color:"white" , background:"green"}}>CREATE NEW ACCOUNT</button>
+                </div>
+                <br />
                 </Col>
                 <Col></Col>
-            </Row>
+            </Row></Container>
+
             <br />
         </div>
-    )
-};
+    );
+}
 
 
-export default Auth;
+
+export default Login;
