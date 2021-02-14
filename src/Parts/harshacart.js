@@ -12,6 +12,7 @@ const Harshacart = () => {
         bold: {fontWeight: 'bold',color:"grey",marginLeft:"10px"},
         
     };
+    fetch('http://localhost:3000').then(data=>console.log(data));
     return (
         <div>
         <img style={mystyle} src={companyLogo} alt="BigCo Inc. logo"/>

@@ -1,18 +1,50 @@
-import React, { useState } from 'react';
-import { Card, Row, Container, Col } from 'react-bootstrap';
-const Signup = (props) => {
-  
-
-    const forsignup = {
-        forsignup: {
-            color:"blue",
-            float:"center"
+import React from 'react';
+import {  Row, Container, Col } from 'react-bootstrap';
+class Signup extends React.Component {
+    constructor(props) {
+        super(props);
+    this.state = {
+        user: {
+            email: '',
+            password: ''
         }
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+}
+    handleChange(event) {
+        const { name, value } = event.target;
+        const { user } = this.state;
+        this.setState({
+            user: {
+                ...user,
+                [name]: value
+            }
+        });
     }
 
+    handleSubmit(event) {
+        event.preventDefault();
+
+        this.setState({ submitted: true });
+        const { user } = this.state;
+        if (user.email && user.password) {
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ userName:user.email,password: user.password })
+            };
+            fetch('http://localhost:3000/register', requestOptions)
+                .then(response => response.json())
+                .then(data => console.log('sucess'));
+        }
+    }
+    render() {
+        const { user} = this.state;
     return (
         <div>
             <br />
+            <form name="form" onSubmit={this.handleSubmit}>
             <Container><Row>
                 <Col></Col>
                 <Col> <h2>SIGNUP</h2>
@@ -20,17 +52,13 @@ const Signup = (props) => {
                 <div>
                     Email
                  <br />
-                    <input type="text" />
+                    <input type="text" className="form-control" name="email" value={user.email} onChange={this.handleChange} />
                 </div>
-                <div>
-                    Confirm Email
-                 <br />
-                    <input type="text" />
-                </div>
+               
                 <div >
                     Password
                  <br />
-                    <input type="password" />
+                    <input type="text" className="form-control" name="password" value={user.password} onChange={this.handleChange} />
                 </div>
                 <br />
                 <div>
@@ -40,22 +68,12 @@ const Signup = (props) => {
                 </Col>
                 <Col></Col>
             </Row></Container>
-
+</form>
             <br />
         </div>
     );
-}
-
-const useFormInput = initialValue => {
-    const [value, setValue] = useState(initialValue);
-
-    const handleChange = (props) => {
-        setValue(props.target.value);
-    }
-    return {
-        value,
-        onChange: handleChange
     }
 }
+
 
 export default Signup;

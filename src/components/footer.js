@@ -17,7 +17,7 @@ const style = {
 }
 
 const font ={
-  color:"black"
+  color:"grey"
 }
 
 
@@ -30,7 +30,7 @@ const Footer=() => {
               <Col><h2 style={font}>Policy</h2></Col>
               <Col><h2 style={font}>About us</h2></Col>
               <Col>
-              <h2>Social</h2>
+              <h2 style={font}>Social</h2>
               <img src={Facebook} />
               <img src={Facebook} />
               <img src={Facebook} />

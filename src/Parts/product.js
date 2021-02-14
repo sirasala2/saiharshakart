@@ -1,6 +1,6 @@
 import React from 'react';
 import proimg from '../assets/soundimg.jpeg'
-import { Button, Row, Container, Col } from 'react-bootstrap';
+import { Button, Row,  Col } from 'react-bootstrap';
 
 const Product = (props) => {
   return (

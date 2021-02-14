@@ -40,7 +40,6 @@ const App = () => {
         <Route path="/product-detail" exact>
           <ProductDetail />
         </Route>
-        
         <Route path="/signup" exact>
           <Signup />
         </Route>

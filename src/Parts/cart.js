@@ -1,7 +1,7 @@
 import React from 'react';
 import proimg from '../assets/soundimg.jpeg'
 import { Button, Row, Col, Card } from 'react-bootstrap';
-import styled from 'styled-components';
+
 
 const Cart = () => {
     const checkoutbtn = {
@@ -9,11 +9,7 @@ const Cart = () => {
             float: 'right'
         }
     };
-    const Total ={
-        total:{
-            float:'center'
-        }
-    }
+    
     
 
     
