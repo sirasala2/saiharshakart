@@ -1,23 +1,24 @@
 import React from 'react';
-import proimg from '../assets/soundimg.jpeg'
 import { Button, Row,  Col } from 'react-bootstrap';
 
-class Product extends React.Component{
+class Address extends React.Component{
   state = {
     isLoading: true,
-    products: [],
+    addresses: [],
     error: null
   }
   fetchProducts() {
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ storeid: "603234635ffda7129cf662b6" })
+      body: JSON.stringify({ 
+        userid:localStorage.getItem('userid')
+    })
   };
-  fetch('http://localhost:3000/getproductsbystoreid', requestOptions)
+  fetch('http://localhost:3000/getaddresses', requestOptions)
       .then(response => response.json())
       .then(data => this.setState({
-        products: data,
+        addresses: data,
         isLoading: false,
       }));
 
@@ -26,22 +27,24 @@ class Product extends React.Component{
     this.fetchProducts();
   };
   render() {
-    const { isLoading, products } = this.state;
+    const { isLoading, addresses } = this.state;
   return (
+   
     <React.Fragment>
       <Row style={{margin:"10px"}}>
       <div>
+      <button>Add Address</button>
           {!isLoading ? (
-            products.map(product => {
-              const { productname, size, price } = product;
+            addresses.map(address => {
+              const { firstname, lastname, phone } = address;
               return (
                 
                 <Col style={{border:"1px solid", borderColor:"grey",borderRadius:"5px",margin:"10px",width:"20%"}}>
           {/* <img src={img} /> */}
-          <h2>{productname}</h2>
-          <h2>{size}</h2>
-          <h2>{price}</h2>
-          <Button href="/product-detail">details
+          <h2>{firstname}</h2>
+          <h2>{lastname}</h2>
+          <h2>{phone}</h2>
+          <Button href="/product-detail">Edit
           </Button>
         </Col>
         
@@ -60,4 +63,4 @@ class Product extends React.Component{
 };
 
 
-export default Product;
+export default Address;

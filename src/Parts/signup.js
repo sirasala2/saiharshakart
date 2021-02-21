@@ -36,7 +36,7 @@ class Signup extends React.Component {
             };
             fetch('http://localhost:3000/register', requestOptions)
                 .then(response => response.json())
-                .then(data => console.log('sucess'));
+                .then(data => localStorage.setItem('userid',data[0]._id));
         }
     }
     render() {

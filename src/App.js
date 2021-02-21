@@ -14,6 +14,8 @@ import { NavigationBar } from '../src/components/NavigationBar';
 import Footer from './components/footer';
 import Categories from './components/Categories';
 import Signup from './Parts/signup';
+import FilesUploadComponent from './fileupload';
+import Address from './Parts/address/addaddress';
 
 
 
@@ -42,6 +44,12 @@ const App = () => {
         </Route>
         <Route path="/signup" exact>
           <Signup />
+        </Route>
+        <Route path="/fu" exact>
+          <FilesUploadComponent />
+        </Route>
+        <Route path="/getaddresses" exact>
+          <Address />
         </Route>
         <Redirect to="/" />
       </Switch>

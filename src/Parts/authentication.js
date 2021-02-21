@@ -37,7 +37,7 @@ class Login extends React.Component {
             };
             fetch('http://localhost:3000/login', requestOptions)
                 .then(response => response.json())
-                .then(data => console.log('sucess'));
+                .then(data =>   localStorage.setItem('userid',data._id));
         }
     }
     render() {
@@ -65,9 +65,13 @@ class Login extends React.Component {
                                 <button style={{ textAlign: "center", color: "white", background: "blue" }}>Login</button>
                             </div>
                             <br />
-                            {/* <div>
+                            <div>
+                                <Button style={{color:"white", background: "blue"}}>Forgotpassword</Button>
+                            </div>
+                            <br />
+                            <div>
                                 <Button><Link to="/signup" style={{ textAlign: "center", color: "white", background: "green" }}>CREATE NEW ACCOUNT</Link></Button>
-                            </div> */}
+                            </div>
                             <br />
                         </Col>
                         <Col></Col>
@@ -78,7 +82,4 @@ class Login extends React.Component {
         );
     }
 }
-
-
-
 export default Login;
