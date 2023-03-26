@@ -91,13 +91,13 @@ router.post("/forgotpassword", function (req, res) {
       var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'sirasala.harshachintu10@gmail.com',
-          pass: 'sirasala@chintu'
+          user: '************@gmail.com',
+          pass: '********'
         }
       });
       const tokenGenerated = token.generate(16);
       var mailOptions = {
-        from: 'sirasala.harshachintu10@gmail.com',
+        from: '*********@gmail.com',
         to: req.body.userName,
         subject: 'Sending Email using Node.js',
         text: 'That was easy!' + tokenGenerated
